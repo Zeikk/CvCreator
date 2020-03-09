@@ -1,0 +1,57 @@
+{
+  "name": "CVcreator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "env-cmd -f ./tests.env jest --watchAll",
+    "client": "npm run dev --prefix client",
+    "server": "env-cmd node server/src/index.js",
+    "install_appli": "npm install && npm install client"
+  },
+  "engines": {
+    "node": ">=12.6.0",
+    "npm": ">=6.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "latest",
+    "CVcreatorClient": "file:client",
+    "bcryptjs": "latest",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "express": "latest",
+    "jsonwebtoken": "latest",
+    "log-symbols": "latest",
+    "mongodb": "latest",
+    "mongoose": "latest",
+    "multer": "latest",
+    "next": "^9.2.2",
+    "node-sass": "latest",
+    "prebuild-install": "^5.3.3",
+    "regenerator-runtime": "^0.13.3",
+    "sharp": "^0.24.1",
+    "validator": "latest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.6",
+    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "concurrently": "^4.1.2",
+    "env-cmd": "^10.1.0",
+    "jest": "latest",
+    "supertest": "latest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleDirectories": [
+      "node_modules",
+      "ClientApp"
+    ]
+  }
+}
