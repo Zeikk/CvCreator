@@ -4,12 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "npm run server",
+    "dev": "npm run server",
     "test": "env-cmd -f ./tests.env jest --watchAll",
-    "client": "npm run dev --prefix client",
-    "server": "env-cmd node server/src/index.js",
-    "install_appli": "npm install && npm install client"
+    "server": "env-cmd node server/src/index.js"
   },
   "engines": {
     "node": ">=12.6.0",
