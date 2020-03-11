@@ -6,8 +6,7 @@
   "scripts": {
     "start": "npm run server",
     "dev": "npm run server",
-    "test": "env-cmd -f ./tests.env jest --watchAll",
-    "server": "env-cmd node server/src/index.js"
+    "server": "server/src/index.js"
   },
   "engines": {
     "node": ">=12.6.0",
