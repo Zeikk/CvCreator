@@ -45,6 +45,6 @@
     "supertest": "latest"
   },
   "jest": {
-    "testEnvironment": "node",
+    "testEnvironment": "node"
   }
 }
