@@ -1,3 +1,4 @@
+const path = require("path")
 const express = require('express')
 require('./db/mongoose')
 const cors = require('cors')
@@ -5,8 +6,10 @@ const userRouter = require('./routers/user')
 const cvRouter = require('./routers/cv')
 
 const app = express()
+const viewsPath = path.join(__dirname, "./views");
 
 app.set("view engine", "ejs");
+app.set("views", viewsPath);
 
 // Website under Maintenance
 // app.use((req, res, next) => {
@@ -14,9 +17,7 @@ app.set("view engine", "ejs");
 // })
 app.use(cors())
 app.use(express.json())
-app.use('/', (req, res) => {
-render('./pages/index.ejs')
-})
+app.use('/', require('./routers/index'))
 app.use(userRouter)
 app.use(cvRouter)
 
