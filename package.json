@@ -20,7 +20,6 @@
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "latest",
-    "CVcreatorClient": "file:client",
     "bcryptjs": "latest",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
