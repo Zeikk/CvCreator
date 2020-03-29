@@ -93,7 +93,7 @@ router.post(
 	}
 )
 
-/*router.post('/users/logout', async (req, res) => {
+router.post('/users/logout', async (req, res) => {
 
 	console.log(req.user)
 	console.log(req.body)
@@ -111,8 +111,8 @@ router.post(
 		console.log(error)
 		res.status(500).send(error)
 	}
-})*/
-
+})
+/*
 router.post('/users/logout', async (req, res) => {
 
 	var bytes  = CryptoJS.AES.decrypt(req.body.id, 'grainDeSel');
@@ -132,7 +132,7 @@ router.post('/users/logout', async (req, res) => {
 		console.log(error)
 		res.status(404).send(error)
 	}
-})
+})*/
 
 router.post('/users/logoutAll', async (req, res) => {
 	
