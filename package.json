@@ -27,7 +27,7 @@
     "mongodb": "latest",
     "mongoose": "latest",
     "multer": "latest",
-    "next": "^9.2.2",
+    "next": "^11.1.0",
     "node-sass": "latest",
     "path": "^0.12.7",
     "prebuild-install": "^5.3.3",
